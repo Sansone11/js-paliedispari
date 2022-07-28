@@ -16,17 +16,28 @@ const cpuNumber = Math.floor(Math.random()*5)+1;
 console.log(cpuNumber)
 let somma = userNumberChoise + cpuNumber;
 
-let filter =IsNotUneven(somma) ;
+let filter = IsEven(somma);
+console.log(filter);
 
 console.log(somma);
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-function IsNotUneven(somma)
+function IsEven(somma)
 {
-    if (somma %2 == 1  ){
+    // se la somma ha modulo uguale a il return è falso
+    if ( somma % 2 == 1  ){
         console.log('dispari')
+        return false
     }
     else
     {
         console.log('pari')
+        return true
     }
+}
+// se la scelta utente è uguale a pari ed il return è vero hai vinto o se la scelta utente è dispari e il return è diverso da true hai vinto
+if((userChoise === 'pari' && filter === true)||(userChoise === 'dispari' && filter !== true)){
+    alert('hai vinto')
+}else{
+    
+    alert('hai perso')
 }

@@ -17,7 +17,7 @@ if (parola === parolaInversa) {
 function invertiParola(parola) {
     // creo una variabile contenitore
     let parolaInversa = '';
-// assengno all'indice il valore della length -1
+    // assengno all'indice il valore della length -1
     let i = parola.length - 1; 
     
     while (i >= 0) {
@@ -25,5 +25,9 @@ function invertiParola(parola) {
         i--;
     }
 
+
+    // let arrayParola = parola.split('')
+    // let arrayParolaInversa = arrayParola.reverse()
+    // let parolaInversa = arrayParolaInversa.join('')
     return parolaInversa;
 }
